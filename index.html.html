@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Satwinder Singh | MBA Student (HRM)</title>
+<style>
+  :root { --accent: #1b2a5c; --accent-light: #e8ecf7; --text: #1f2430; --muted: #5b6475; --error: #d62828; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--text); background: #f6f7fb; line-height: 1.6; }
+  header { background: var(--accent); color: #fff; text-align: center; padding: 48px 20px 40px; }
+  .photo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; background: #3a4a85; display: block; margin: 0 auto 16px; }
+  header h1 { font-size: 2rem; }
+  header p { opacity: .9; margin-top: 6px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .links { margin-top: 12px; font-size: .95rem; }
+  .links a { color: #fff; margin: 0 8px; }
+  main { max-width: 820px; margin: 0 auto; padding: 24px 16px 40px; }
+  section { background: #fff; border-radius: 12px; padding: 22px 24px; margin-top: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  h2 { color: var(--accent); font-size: 1.25rem; margin-bottom: 12px; border-bottom: 2px solid var(--accent-light); padding-bottom: 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { background: var(--accent-light); color: var(--accent); padding: 5px 12px; border-radius: 999px; font-size: .88rem; font-weight: 600; }
+  .item { margin-bottom: 14px; }
+  .item:last-child { margin-bottom: 0; }
+  .item h3 { font-size: 1.02rem; }
+  .item .meta { color: var(--muted); font-size: .88rem; }
+  .cta { text-align: center; margin-top: 28px; }
+  .big-btn { background: var(--accent); color: #fff; border: none; border-radius: 999px; padding: 16px 44px; font-size: 1.2rem; font-weight: 700; cursor: pointer; }
+  .big-btn:hover { opacity: .92; }
+  /* Pop-up */
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); align-items: center; justify-content: center; padding: 16px; z-index: 10; }
+  .overlay.open { display: flex; }
+  .modal { background: #fff; border-radius: 12px; width: 100%; max-width: 440px; max-height: 92vh; overflow-y: auto; padding: 24px; position: relative; }
+  .modal h2 { border: none; margin-bottom: 8px; }
+  .close { position: absolute; top: 10px; right: 14px; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--muted); }
+  label { display: block; font-weight: 600; font-size: .9rem; margin-top: 12px; margin-bottom: 4px; }
+  input, textarea, select { width: 100%; padding: 10px; border: 1px solid #c8cddb; border-radius: 8px; font-size: 1rem; font-family: inherit; }
+  textarea { min-height: 90px; resize: vertical; }
+  .phone-row { display: flex; align-items: center; gap: 6px; }
+  .phone-row img { width: 24px; height: 18px; flex-shrink: 0; }
+  .phone-row select { width: 120px; flex-shrink: 0; }
+  .hint { color: var(--error); font-size: .82rem; min-height: 1em; margin-top: 3px; }
+  .submit { width: 100%; margin-top: 16px; background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 12px; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+  .submit:disabled { opacity: .7; cursor: default; }
+  .form-msg { margin-top: 10px; font-size: .95rem; text-align: center; }
+  .form-msg.ok { color: #1b7a3a; }
+  .form-msg.err { color: var(--error); }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 0 28px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="photo" src="profile.jpg" alt="Satwinder Singh" onerror="this.style.visibility='hidden'">
+  <h1>Satwinder Singh</h1>
+  <p>MBA Student | Human Resource Management | BBA (Hons.) Marketing</p>
+  <div class="links">
+    <a href="mailto:sattubrar30@gmail.com">sattubrar30@gmail.com</a>
+    <a href="https://www.linkedin.com/in/satwindersingh30" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <p>MBA student in Human Resource Management at Chandigarh University, with a background in marketing, business development, event management and student leadership. Based in Sri Muktsar Sahib, Punjab, India.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="tags">
+      <span class="tag">Crowdfunding</span>
+      <span class="tag">Sustainable Development</span>
+      <span class="tag">Marketing</span>
+      <span class="tag">Business Development</span>
+      <span class="tag">Event Management</span>
+      <span class="tag">Student Leadership</span>
+      <span class="tag">Human Resource Management</span>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="item">
+      <h3>Master of Business Administration, Human Resources Management</h3>
+      <div class="meta">Chandigarh University · July 2026 – July 2028</div>
+    </div>
+    <div class="item">
+      <h3>Bachelor of Business Administration (BBA), Human Resources Management</h3>
+      <div class="meta">Chandigarh University · 2023 – 2026</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <h3>Class Representative</h3>
+      <div class="meta">University School of Business, Chandigarh University · June 2026 – Present</div>
+    </div>
+    <div class="item">
+      <h3>Crowdfunding Intern</h3>
+      <div class="meta">Muskurahat Foundation · May 2024 – June 2024</div>
+      <p>Learned to manage people and connect them using influencing skills.</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="item"><h3>Principles of Sustainable Development</h3></div>
+  </section>
+
+  <div class="cta">
+    <button class="big-btn" id="openBtn" type="button">Connect with me</button>
+  </div>
+</main>
+
+<footer>&copy; Satwinder Singh</footer>
+
+<!-- Enquiry pop-up -->
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+    <button class="close" id="closeBtn" type="button" aria-label="Close">&times;</button>
+    <h2 id="formTitle">Connect with me</h2>
+    <form id="enquiryForm" novalidate>
+      <label for="name">Full name</label>
+      <input type="text" id="name" required>
+      <div class="hint" id="nameHint"></div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <div class="hint" id="emailHint"></div>
+
+      <label for="mobile">Mobile number</label>
+      <div class="phone-row">
+        <img id="flag" src="https://flagcdn.com/24x18/in.png" alt="Flag" width="24" height="18">
+        <select id="country" aria-label="Country code">
+          <option value="IN" data-dial="+91">IN +91</option>
+          <option value="US" data-dial="+1">US +1</option>
+          <option value="GB" data-dial="+44">GB +44</option>
+          <option value="AE" data-dial="+971">AE +971</option>
+          <option value="CA" data-dial="+1">CA +1</option>
+          <option value="AU" data-dial="+61">AU +61</option>
+          <option value="SG" data-dial="+65">SG +65</option>
+          <option value="SA" data-dial="+966">SA +966</option>
+          <option value="QA" data-dial="+974">QA +974</option>
+          <option value="NP" data-dial="+977">NP +977</option>
+          <option value="BD" data-dial="+880">BD +880</option>
+          <option value="LK" data-dial="+94">LK +94</option>
+          <option value="DE" data-dial="+49">DE +49</option>
+        </select>
+        <input type="tel" id="mobile" inputmode="numeric" required pattern="[6-9][0-9]{9}">
+      </div>
+      <div class="hint" id="mobileHint"></div>
+
+      <label for="enquiry">Enquiry</label>
+      <textarea id="enquiry" required></textarea>
+      <div class="hint" id="enquiryHint"></div>
+
+      <button class="submit" id="submitBtn" type="submit">Submit</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+// Paste your n8n webhook URL here
+const WEBHOOK_URL = "PASTE_YOUR_N8N_WEBHOOK_URL_HERE";
+// Optional ipinfo.io token (leave empty to use the free limit)
+const IPINFO_TOKEN = "";
+
+// Email check rule
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+// Get the page elements we need
+const overlay = document.getElementById("overlay");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const form = document.getElementById("enquiryForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const mobileInput = document.getElementById("mobile");
+const enquiryInput = document.getElementById("enquiry");
+const countrySelect = document.getElementById("country");
+const flagImg = document.getElementById("flag");
+const submitBtn = document.getElementById("submitBtn");
+const formMsg = document.getElementById("formMsg");
+const nameHint = document.getElementById("nameHint");
+const emailHint = document.getElementById("emailHint");
+const mobileHint = document.getElementById("mobileHint");
+const enquiryHint = document.getElementById("enquiryHint");
+
+// Visitor location (filled from the ipinfo reply; empty if the call fails)
+let visitor = { city: "", region: "", country: "" };
+// Make sure the location lookup runs only once
+let locationLooked = false;
+
+// Show the flag for the selected country (image from flagcdn.com)
+function updateFlag() {
+  const cc = countrySelect.value.toLowerCase();
+  flagImg.src = "https://flagcdn.com/24x18/" + cc + ".png";
+  flagImg.alt = countrySelect.value + " flag";
+}
+
+// Change the phone pattern depending on the country
+function updatePattern() {
+  if (countrySelect.value === "IN") {
+    mobileInput.setAttribute("pattern", "[6-9][0-9]{9}");
+  } else {
+    mobileInput.setAttribute("pattern", "[0-9]{6,15}");
+  }
+}
+
+// Check the phone number using the pattern attribute
+function mobileIsValid() {
+  const pattern = new RegExp("^(?:" + mobileInput.getAttribute("pattern") + ")$");
+  return pattern.test(mobileInput.value.trim());
+}
+
+// Show the right phone error message
+function mobileMessage() {
+  if (countrySelect.value === "IN") {
+    return "Enter a 10-digit Indian mobile number starting with 6, 7, 8 or 9.";
+  }
+  return "Enter a mobile number with 6 to 15 digits.";
+}
+
+// When the country changes, update the flag and the pattern
+countrySelect.addEventListener("change", function () {
+  updateFlag();
+  updatePattern();
+  mobileHint.textContent = "";
+});
+
+// Look up the visitor's location (called once, when the pop-up opens)
+async function lookupLocation() {
+  if (locationLooked) return;
+  locationLooked = true;
+  try {
+    let url = "https://ipinfo.io/json";
+    if (IPINFO_TOKEN !== "") url += "?token=" + IPINFO_TOKEN;
+    const res = await fetch(url);
+    const info = await res.json();
+    console.log("ipinfo reply:", info);
+    visitor = { city: info.city || "", region: info.region || "", country: info.country || "" };
+    // Select the country in the drop-down only if it is in our list
+    const exists = Array.from(countrySelect.options).some(function (o) { return o.value === visitor.country; });
+    countrySelect.value = exists ? visitor.country : "IN";
+  } catch (err) {
+    // If the call fails, quietly default to India
+    countrySelect.value = "IN";
+  }
+  updateFlag();
+  updatePattern();
+}
+
+// Open the pop-up
+function openModal() {
+  overlay.classList.add("open");
+  lookupLocation();
+  nameInput.focus();
+}
+
+// Close the pop-up
+function closeModal() {
+  overlay.classList.remove("open");
+}
+
+openBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
+
+// Close the pop-up with the Esc key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeModal();
+});
+
+// Close when clicking on the dark area outside the box
+overlay.addEventListener("click", function (e) {
+  if (e.target === overlay) closeModal();
+});
+
+// Check all fields; return true only if everything is fine
+function validateForm() {
+  let ok = true;
+  nameHint.textContent = "";
+  emailHint.textContent = "";
+  mobileHint.textContent = "";
+  enquiryHint.textContent = "";
+
+  if (nameInput.value.trim() === "") {
+    nameHint.textContent = "Please enter your full name.";
+    ok = false;
+  }
+  if (!EMAIL_REGEX.test(emailInput.value.trim())) {
+    emailHint.textContent = "Please enter a valid email address.";
+    ok = false;
+  }
+  if (!mobileIsValid()) {
+    mobileHint.textContent = mobileMessage();
+    ok = false;
+  }
+  if (enquiryInput.value.trim() === "") {
+    enquiryHint.textContent = "Please write your enquiry.";
+    ok = false;
+  }
+  return ok;
+}
+
+// Handle the form submit
+form.addEventListener("submit", async function (e) {
+  e.preventDefault(); // stop the page reload
+  formMsg.textContent = "";
+  formMsg.className = "form-msg";
+
+  if (!validateForm()) return;
+
+  // Do not send if the webhook URL was not set
+  if (WEBHOOK_URL.indexOf("PASTE_YOUR") !== -1) {
+    alert("Please paste your n8n webhook URL in the WEBHOOK_URL line of the script.");
+    return;
+  }
+
+  // Build the data to send
+  const dial = countrySelect.options[countrySelect.selectedIndex].dataset.dial;
+  const data = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    mobile: dial + " " + mobileInput.value.trim(),
+    enquiry: enquiryInput.value.trim(),
+    source: "CV website",
+    visitor: { city: visitor.city, region: visitor.region, country: visitor.country }
+  };
+  console.log("Sending data:", data);
+
+  // Show "Sending..." on the button
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      // Success: thank the visitor and clear the form
+      formMsg.textContent = "Thank you, " + data.name + ". Your enquiry has been received.";
+      formMsg.classList.add("ok");
+      form.reset();
+      countrySelect.value = visitor.country && Array.from(countrySelect.options).some(function (o) { return o.value === visitor.country; }) ? visitor.country : "IN";
+      updateFlag();
+      updatePattern();
+    } else if (res.status === 400) {
+      // n8n sent a validation error: show its message in red
+      let msg = "Please check your details and try again.";
+      try {
+        const err = await res.json();
+        if (err && err.message) msg = err.message;
+      } catch (e2) { /* keep the default message */ }
+      formMsg.textContent = msg;
+      formMsg.classList.add("err");
+    } else {
+      throw new Error("Server replied with status " + res.status);
+    }
+  } catch (err) {
+    // Any other problem: friendly error message
+    formMsg.textContent = "Sorry, something went wrong. Please try again in a little while.";
+    formMsg.classList.add("err");
+  }
+
+  // Put the button back to normal
+  submitBtn.disabled = false;
+  submitBtn.textContent = "Submit";
+});
+
+// Set the starting flag and pattern
+updateFlag();
+updatePattern();
+</script>
+</body>
+</html>
